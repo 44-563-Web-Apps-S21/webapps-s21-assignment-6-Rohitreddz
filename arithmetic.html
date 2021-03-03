@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+ <head>
+     <title> arithmetic operations </title>
+     <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+ </head>
+<body>
+<h2> Rohit Reddy Chandupatla computes </h2>
+<form>
+    <label for="form1_number"> Enter a number </label>
+    <input type="number" id="form1_number" name="form1_number" value=10> 
+    <br>
+    <label for="form1_number2"> Enter a number </label>
+    <input type="number" id="form1_number2" name="form1_number2" value="2"> 
+    <br>
+    <input type="button" onclick="permutations()" value="compute">
+</form>
+<p id="result"> The text will be displayed on the screen by checking result </p>
+<script>
+    function permutations() {
+        var ch = document.getElementById("form1_number").value;
+        var ch1 = document.getElementById("form1_number2").value;
+        var product = 1;
+        var d = ch;
+        out = document.getElementById("result")
+        for (var i = ch-1; i > 0; i--) {
+            ch = ch * i;
+        }
+        var ch2 = d - ch1;
+        for (j = ch2-1 ; j > 0; j--) {
+            ch2 = ch2 * j;
+        }
+        product = ch / ch2;
+        console.log(product);
+        out.innerHTML = d + " permute " + ch1 + " should be " + product;
+    }
+    </script>
+    
