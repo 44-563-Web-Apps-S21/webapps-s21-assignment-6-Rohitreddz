@@ -14,6 +14,7 @@
 <body>
 
 <h2>Rohit Reddy Chandupatla builds a bear</h2>
+<div class = "container" style = "background-color: rgb(219, 252, 0);"  >
 
 <form>
     <div class="form-check">
@@ -33,7 +34,7 @@
 </br>
 </div>
 </br>
-<input type="button" class="btn btn-primary"  onclick="startbear()" value="Start a bear">
+<input class="btn btn-success" type="button" class="btn btn-primary"  onclick="startbear()" value="Start a bear">
 </form>
 </br>
 <form>
@@ -45,11 +46,12 @@
     <input type ="text" class="form-control" id="value" name="value">
 </br>
 </div>
-<input type="button"  class="btn btn-primary" onclick="updatebear()" value="Update the bear">
+<input class="btn btn-success" type="button"  class="btn btn-primary" onclick="updatebear()" value="Update the bear">
 </form>
 </br>
 
 <p id="result"> The result will be displayed here </p>
+</div>
 <script> 
 var my_bear={};
 function startbear(){
